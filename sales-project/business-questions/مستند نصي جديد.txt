@@ -1,0 +1,28 @@
+# Sales Dataset Overview & Business Questions
+
+## 1. Dataset Description
+- **Source:** UCI Machine Learning Repository (Online Retail II)
+- **Context:** Transactional sales data for a UK-based online retail store specializing in unique all-occasion gifts. Many customers are wholesalers.
+- **Time Period:** December 1, 2009 – December 9, 2011 (2 Years)
+- **Structure:** Single transactional table (`online_retail_II.csv`) containing ~1,067,371 rows and 8 columns.
+
+### Columns Breakdown
+| Column Name | Description | Expected Data Type |
+| :--- | :--- | :--- |
+| `Invoice` | 6-digit invoice number. Codes starting with 'C' indicate cancellations. | String / Object |
+| `StockCode` | 5-digit unique product/item code. | String / Object |
+| `Description` | Product name. | String / Object |
+| `Quantity` | Quantities of each product per transaction (negative values indicate returns). | Integer |
+| `InvoiceDate` | Date and time when each transaction was generated. | Datetime |
+| `Price` | Product price per unit in Sterling (£). | Float |
+| `Customer ID` | 5-digit unique customer identifier. | String / Float |
+| `Country` | Country name where each customer resides. | String / Object |
+
+---
+
+## 2. Business Questions (Sales Manager Perspective)
+1. **Revenue & Seasonality:** What are the monthly and quarterly revenue trends across the two-year period, and which months represent peak sales seasons?
+2. **Product Performance:** Which top 10 products generate the highest total revenue, and which products suffer from the highest return/cancellation rates?
+3. **Geographical Expansion:** Outside the UK, which international markets (countries) contribute the most to total sales volume and average order value?
+4. **Customer Concentration (Pareto Analysis):** What percentage of total revenue is driven by the top 20% of customers (wholesalers vs. individual buyers)?
+5. **Order Cancellations Impact:** How much potential revenue is lost due to canceled invoices (`Invoice` starting with 'C'), and is there a pattern by product or customer segment?
